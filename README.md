@@ -19,7 +19,10 @@ create region --name=employees --type=REPLICATE
 6. To test EmployeeRestServer service use Postman application (https://www.getpostman.com/)
 
 7. Following paths are available:
+
+---------------------------------------------------------------------
 To receive all the active employees:
+
 GET /employee/all HTTP/1.1
 Host: localhost:8080
 Content-Type: application/json
@@ -58,11 +61,13 @@ Content-Type: application/json
 ]
 ---------------------------------------------------------------------
 To get information of a particular employee:
+
 GET /employee/{employee id} HTTP/1.1
 Host: localhost:8080
 Content-Type: application/json
 ---------------------------------------------------------------------
 To make employees inactive (demands authorization: user=user, password should be taked from RestServer console log:e.g. Using default security password: 90b74cec-4c25-4562-a7d0-077fec8a1d3f):
+
 DELETE /delete HTTP/1.1
 Host: localhost:8080
 Content-Type: application/json
